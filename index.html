@@ -1,49 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pulse Motion Concept</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="wrap" id="pulseMotion">
-    <section class="stage" aria-label="Animated Pulse logo concept">
-      <div class="energy"></div>
-      <div class="ring ring-a"></div>
-      <div class="ring ring-b"></div>
-      <div class="ring ring-c"></div>
-      <div class="particles" aria-hidden="true"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse Motion Concept</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap" id="pulseMotion">
+      <section class="stage" aria-label="Animated Pulse logo concept">
+        <div class="energy"></div>
+        <div class="ring ring-a"></div>
+        <div class="ring ring-b"></div>
+        <div class="ring ring-c"></div>
+        <div class="particles" aria-hidden="true"></div>
 
-      <svg class="pulse-svg" viewBox="0 0 1200 420" role="img" aria-label="PULSE logo with animated heartbeat line">
-        <defs>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="7" result="blur"/>
-            <feMerge>
-              <feMergeNode in="blur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-        </defs>
+        <svg
+          class="pulse-svg"
+          viewBox="0 0 1200 420"
+          role="img"
+          aria-label="PULSE logo with animated heartbeat line"
+        >
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="7" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
 
-        <path class="ecg ghost"
-          d="M0 215 H190 L205 185 L220 270 L240 130 L260 250 L278 215 H425 L450 215 L470 190 L490 245 L515 55 L545 355 L570 215 H760 L785 175 L805 265 L825 135 L845 245 L865 215 H1200"/>
+          <path
+            class="ecg ghost"
+            d="M0 215 H190 L205 185 L220 270 L240 130 L260 250 L278 215 H425 L450 215 L470 190 L490 245 L515 55 L545 355 L570 215 H760 L785 175 L805 265 L825 135 L845 245 L865 215 H1200"
+          />
 
-        <path class="ecg live" pathLength="1"
-          d="M0 215 H190 L205 185 L220 270 L240 130 L260 250 L278 215 H425 L450 215 L470 190 L490 245 L515 55 L545 355 L570 215 H760 L785 175 L805 265 L825 135 L845 245 L865 215 H1200"/>
+          <path
+            class="ecg live"
+            pathLength="1"
+            d="M0 215 H190 L205 185 L220 270 L240 130 L260 250 L278 215 H425 L450 215 L470 190 L490 245 L515 55 L545 355 L570 215 H760 L785 175 L805 265 L825 135 L845 245 L865 215 H1200"
+          />
 
-        <text x="600" y="242" text-anchor="middle" class="logo">PULSE</text>
-        <text x="600" y="315" text-anchor="middle" class="tagline">BRING YOUR MUSIC TO LIFE.</text>
-      </svg>
+          <text x="600" y="242" text-anchor="middle" class="logo">PULSE</text>
+          <text x="600" y="315" text-anchor="middle" class="tagline">
+            BRING YOUR MUSIC TO LIFE.
+          </text>
+        </svg>
 
-      <div class="beat-core" aria-hidden="true"></div>
-    </section>
+        <div class="beat-core" aria-hidden="true"></div>
+      </section>
 
-    <div class="controls">
-      <button type="button" id="toggleBtn">Pause</button>
-      <button type="button" id="restartBtn">Restart</button>
-    </div>
-  </main>
-  <script src="script.js"></script>
-</body>
+      <div class="controls">
+        <button type="button" id="toggleBtn">Pause</button>
+        <button type="button" id="restartBtn">Restart</button>
+      </div>
+    </main>
+
+    <audio id="beat" src="matts-beat.mp3" controls loop></audio>
+
+    <script src="script.js"></script>
+  </body>
 </html>
